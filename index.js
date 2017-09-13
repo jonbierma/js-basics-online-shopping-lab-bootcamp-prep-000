@@ -40,7 +40,7 @@ function viewCart() {
         str += " and " + item + " at $" + cart[1][item] +"."
       }
     }
-  } 
+  }
 
 }
 
