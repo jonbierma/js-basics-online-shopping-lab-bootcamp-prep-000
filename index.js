@@ -88,7 +88,7 @@ function removeFromCart(item) {
 }
 
 function placeOrder(cardNumber) {
-  if (cardNumber === null ){
+  if (input === null ){
     console.log("Sorry, we don\'t have a credit card on file for you.")
   } else {
     total = total()
