@@ -22,10 +22,13 @@ function viewCart() {
   if (cart.length < 1){
     console.log("Your shopping cart is empty.")
   } else if (cart.length === 1) {
-    var first = cart[0]
-    var key1 = keys[0]
-    var str="In your cart, you have " + key1 + " at $"+ first[key1] + "."
-    console.log(str)
+    for (var item in cart[0]){
+      if (cart[0].hasOwnProperty(item)){
+        console.log("In your cart, you have " + item + " at $"+ cart[0][item] + ".")
+      }
+    }
+  //  var str="In your cart, you have " + key1 + " at $"+ first[key1] + "."
+    //console.log(str)
   } else {
     var cartString = `In your cart, you have `
     for (var i = 1; i< cart.length; i++){
