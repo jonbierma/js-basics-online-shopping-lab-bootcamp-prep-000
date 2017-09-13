@@ -37,10 +37,10 @@ function viewCart() {
     }
     for (var item in cart[1]){
       if (cart[1].hasOwnProperty(item)){
-        str="In your cart, you have " + item + " at $"+ cart[1][item]
+        str += " and " + item + " at $"cart[1][item] +"."
       }
     }
-      str += ` and ${item} at $${cart[1][item]}.`
+      
       console.log(str)
     }
 
