@@ -17,7 +17,7 @@ function addToCart(item) {
 }
 
 function viewCart() {
-  if (cart.length === 0){
+  if (cart.length < 1){
     console.log("Your shopping cart is empty")
   } else {
     var cartString = `In your cart, you have `
