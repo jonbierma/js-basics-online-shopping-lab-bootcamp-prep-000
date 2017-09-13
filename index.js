@@ -76,17 +76,23 @@ function total() {
 function removeFromCart(item) {
   var cart=getCart()
   for (var i=0; i<cart.length;i++){
-    
+
       if (cart[i].hasOwnProperty(item)){
         var newCart = cart.splice(i,1)
           return newCart
       }
-    
+
   }
   console.log("That item is not in your cart.");
   return cart
 }
 
 function placeOrder(cardNumber) {
-  // write your code here
+  if (cardNumber === null ){
+    console.log("Sorry, we don't have a credit card on file for you.")
+  } else {
+    total = total()
+    console.log(`Your total cost is $${total}, which will be charged to the card ${cardNumber}.`)
+  }
+  setCart([])
 }
