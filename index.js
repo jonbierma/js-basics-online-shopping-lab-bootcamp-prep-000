@@ -17,12 +17,17 @@ function addToCart(item) {
 }
 
 function viewCart() {
-  if (getCart().length < 1){
+  cart=getCart()
+  var keys=Object.keys(getCart())
+  if (cart.length < 1){
     console.log("Your shopping cart is empty.")
+  } else if (cart.length === 1) {
+    var str=`In your cart, you have ${keys[0]} at ${cart[0].keys[0]}`
+    console.log(str)
   } else {
     var cartString = `In your cart, you have `
     for (var i = 1; i< cart.length; i++){
-      var str=Object.keys(cart[i])
+      
       cartString += `, ${str[0]} at $${str[1]},`
     }
   }
