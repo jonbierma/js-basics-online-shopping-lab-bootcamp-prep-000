@@ -55,7 +55,7 @@ function viewCart() {
       }
     }
     console.log(str)
-    
+
   }
 
 }
