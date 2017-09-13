@@ -77,8 +77,8 @@ function removeFromCart(item) {
   var cart=getCart()
   for (var i=0; i<cart.length;i++){
     if (cart[i].hasOwnProperty(item)){
-        var newCart1 = cart.slice(0,i)
-        var newCart2 = cart.slice(i+1)
+        var newCart1 = cart.slice(0,i-1)
+        var newCart2 = cart.slice(i)
           var newCart=[...newCart1, ...newCart2]
           return newCart
     } else {
