@@ -40,23 +40,7 @@ function viewCart() {
         str += " and " + item + " at $" + cart[1][item] +"."
       }
     }
-  } else {
-    var str="In your cart, you have "
-    for (var i=0; i<cart.length-1;i++){
-      for (var item in cart[i]){
-        if (cart[i].hasOwnProperty(item)){
-          str+= item + " at $" + cart[i][item] + ", "
-        }
-      }
-    }
-    for (var item in cart[cart.length-1]){
-      if (cart[cartlength-1].hasOwnProperty(item)){
-        str+= item + " at $" + cart[cart.length-1][item] + "."
-      }
-    }
-    console.log(str)
-
-  }
+  } 
 
 }
 
