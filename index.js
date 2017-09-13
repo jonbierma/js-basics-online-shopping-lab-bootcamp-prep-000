@@ -22,7 +22,9 @@ function viewCart() {
   if (cart.length < 1){
     console.log("Your shopping cart is empty.")
   } else if (cart.length === 1) {
-    var str="In your cart, you have " + keys[0] + " at $"+ cart[0][keys[0]] +"."
+    var first = cart[0]
+    var key1 = keys[0]
+    var str="In your cart, you have " + key1 + " at $"+ first[key1] + "."
     console.log(str)
   } else {
     var cartString = `In your cart, you have `
