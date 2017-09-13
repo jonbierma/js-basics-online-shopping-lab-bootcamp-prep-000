@@ -29,7 +29,6 @@ function viewCart() {
     }
   } else if (cart.length === 2){
     var str
-    var cartString = "In your cart, you have "
     for (var item in cart[0]){
       if (cart[0].hasOwnProperty(item)){
         str="In your cart, you have " + item + " at $"+ cart[0][item]
@@ -40,7 +39,9 @@ function viewCart() {
         str += " and " + item + " at $" + cart[1][item] +"."
       }
     }
-  }
+    console.log(str)
+  } 
+  
 
 }
 
