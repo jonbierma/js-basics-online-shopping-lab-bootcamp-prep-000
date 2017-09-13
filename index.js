@@ -51,7 +51,7 @@ function viewCart() {
     }
     for (var item in cart[cart.length-1]){
       if (cart[cart.length-1].hasOwnProperty(item)){
-        str+= item + " at $" + cart[cart.length-1][item] + "."
+        str+= "and " + item + " at $" + cart[cart.length-1][item] + "."
       }
     }
     console.log(str)
