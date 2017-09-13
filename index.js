@@ -21,7 +21,7 @@ function viewCart() {
     console.log("Your shopping cart is empty")
   } else {
     var cartString = `In your cart, you have `
-    for (int i = 1; i< cart.length; i++){
+    for (var i = 1; i< cart.length; i++){
       var str=Object.keys(cart[i])
       cartString += `, ${str[0]} at $${str[1]},`
     }
