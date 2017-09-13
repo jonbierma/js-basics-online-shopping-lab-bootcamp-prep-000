@@ -63,10 +63,12 @@ function viewCart() {
 
 function total() {
   let sum=0
-  var keys = Object.keys(cart)
-  for (var i = 0; i < cart.length; i++){
-
-    sum += parseInt(cart[i][keys[i]])
+  for (var i=0; i<cart.length;i++){
+    for (var item in cart[i]){
+      if (cart[i].hasOwnProperty(item)){
+        sum+=parseInt(cart[i][item])
+      }
+    }
   }
   return sum
 }
