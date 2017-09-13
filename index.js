@@ -40,10 +40,10 @@ function viewCart() {
         str="In your cart, you have " + item + " at $"+ cart[1][item]
       }
     }
-      str += `and ${item} at $${cart[1][item]}.`
+      str += ` and ${item} at $${cart[1][item]}.`
       console.log(str)
     }
-  
+
 }
 
 function total() {
