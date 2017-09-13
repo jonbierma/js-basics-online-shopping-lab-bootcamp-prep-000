@@ -27,15 +27,23 @@ function viewCart() {
         console.log("In your cart, you have " + item + " at $"+ cart[0][item] + ".")
       }
     }
-  //  var str="In your cart, you have " + key1 + " at $"+ first[key1] + "."
-    //console.log(str)
-  } else {
-    var cartString = `In your cart, you have `
-    for (var i = 1; i< cart.length; i++){
-
-      cartString += `, ${str[0]} at $${str[1]},`
+  } else if (cart.length === 2){
+    var str
+    var cartString = "In your cart, you have "
+    for (var item in cart[0]){
+      if (cart[0].hasOwnProperty(item)){
+        str="In your cart, you have " + item + " at $"+ cart[0][item]
+      }
     }
-  }
+    for (var item in cart[1]){
+      if (cart[1].hasOwnProperty(item)){
+        str="In your cart, you have " + item + " at $"+ cart[1][item]
+      }
+    }
+      str += `and ${item} at $${cart[1][item]}.`
+      console.log(str)
+    }
+  
 }
 
 function total() {
